@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="cart.html" id="cart" style="text-decoration: none;"><i class="fa-solid fa-cart-shopping">car<span id="t">T</span></i></a>
+            <button onclick="logout()" class="logout">Log-out</button>
+           <span id="nameofuser"></span>
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()" class="search-box" />
+            <h1 id="shopt">shop<span id="ta">T</span></h1>
+
+        </div>
+<img src="images/resized-800x1200.jpg" usemap="#image-map" class="test" id="test">
+
+<map name="image-map">
+    <area target="" alt="" title="" href="#tie" coords="373,304,405,296,426,638,409,667,378,639" shape="poly">
+    <area target="" alt="" title="" href="#pant"
+        coords="265,619,373,624,407,669,428,619,475,615,616,943,507,963,376,751,333,1121,253,1120,241,699,237,692,235,683,235,693,233,682,234,680"
+        shape="poly">
+    <area target="" alt="" title="" href="#tie" coords="507,964,617,945,529,1119,443,1124" shape="poly">
+    <area target="" alt="" title="" href="#coat" coords="323,246,205,297,119,516,180,684,221,729,322,531,347,411"
+        shape="poly">
+    <area target="" alt="" title="" href="#coat" coords="421,260,507,283,564,478,523,694,449,563,426,444" shape="poly">
+    <area target="" alt="" title="" href="#shirt" coords="374,620,284,619,351,423,327,251,369,291" shape="poly">
+    <area target="" alt="" title="" href="#shirt" coords="458,613,429,615,416,476" shape="poly">
+</map>
+
+<div id="products">
+        <div id="one">
+            <h1>full hands</h1>
+            <h3>999</h3>
+            <img src="images/formal.jpg" width="200px" alt="tharformal">
+            <button onclick='addcart("full hands",1,999,"images/formal.jpg")'>Add to cart</button><br><br><br>
+        </div>
+        <div id="">
+            <h1>formal</h1>
+            <h3>799</h3>
+            <img src="images/formal1.jpg"  width="200px" alt="">
+            <button onclick="addcart('formal',2,899,'images/formal1.jpg')">Add to cart</button><br><br><br>
+        </div>
+        <div id="T-shirt">
+            <h1>T-shirt</h1>
+            <h3>499</h3>
+            <img src= "images/formal2.jpg"  width="200px" alt="">
+            <button onclick="addcart('T-shirt',3,499,'images/formal2.jpg')">Add to cart</button><br><br><br>
+        </div>
+        <div id="T-shirt">
+            <h1>Black casuals</h1>
+             <h3>399</h3>
+             <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80" width="200px">
+             <button onclick="addcart('Black casuals',4,399,'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80')">Add to cart</button>
+            </div>
+       <div id="coat">
+            <h1>Coat</h1>
+            <h3>2099</h3>
+            <img src="images/coat.jpg" alt="" width="200px">
+            <button onclick="addcart('coat',21,2099,'images/coat.jpg')">Add to cart</button>
+       </div>
+       <div id="watch">
+        <h1>Watch</h1>
+        <h3>2999</h3>
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="" width="200px">
+        <button onclick="addcart('watch',5,2999,'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80')">Add to cart</button>
+       </div>
+      <div id="shoes">
+        <h1> shoes</h1>
+        <h3>1499</h3>
+        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80" alt="" width="200px">
+        <button onclick="addcart('shoes',6,1499,'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80')">Add to cart</button>
+      </div>
+    <div id="bag">
+        <h1>Leather Bag</h1>
+        <h3>1799</h3>
+        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80" width="200">
+        <button
+            onclick="addcart('Leather Bag',7,1799,'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80')">Add
+            to cart</button>
+    </div>
+    
+    <div id="wallet">
+        <h1>Wallet</h1>
+        <h3>699</h3>
+        <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80" width="200">
+        <button
+            onclick="addcart('Wallet',8,699,'https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80')">Add
+            to cart</button>
+    </div>
+    
+    <div id="belt">
+        <h1>Leather Belt</h1>
+        <h3>599</h3>
+        <img src="images/belt.jpg" width="200px" alt="">
+        <button
+            onclick="addcart('Belt',9,599,'images/belt.jpg')">Add
+            to cart</button>
+    </div>
+    
+    <div id="sunglasses">
+        <h1>Sunglasses</h1>
+        <h3>1299</h3>
+        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80" width="200">
+        <button
+            onclick="addcart('Sunglasses',10,1299,'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80')">Add
+            to cart</button>
+    </div>
+    
+    <div id="jacket">
+        <h1>Casual Jacket</h1>
+        <h3>2499</h3>
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=600&q=80" width="200">
+        <button
+            onclick="addcart('Jacket',11,2499,'https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=600&q=80')">Add
+            to cart</button>
+    </div>
+    
+    <div id="hoodie">
+        <h1>Hoodie</h1>
+        <h3>1599</h3>
+        <img src="images/hoodie.jpg" width="200">
+        <button
+            onclick="addcart('Hoodie',12,1599,'images/hoodie.jpg')">Add
+            to cart</button>
+    </div>
+    
+    <div id="slippers">
+        <h1>Slippers</h1>
+        <h3>499</h3>
+        <img src="images/slippers.png" width="200px">
+        <button
+            onclick="addcart('Slippers',13,499,'images/slippers.png')">Add
+            to cart</button>
+    </div>
+    
+    <div id="pant">
+        <h1>Pants</h1>
+        <h3>1399</h3>
+        <img src="images/pexels-mart-production-7251067.jpg" width="200px">
+        <button
+            onclick="addcart('Pants',14,1399,'images/pexels-mart-production-7251067.jpg')">Add
+            to cart</button>
+    </div>
+    
+    <div id="wall clock">
+        <h1>Wall Clock</h1>
+        <h3>899</h3>
+        <img src="images/wall clock.jpg" width="200">
+        <button
+            onclick="addcart('Wall Clock',15,899,'images/wall clock.jpg')">Add
+            to cart</button>
+    </div>
+    
+    <div id="hat">
+        <h1>Cap</h1>
+        <h3>399</h3>
+        <img src="images/hat.jpg" width="200">
+        <button
+            onclick="addcart('Hat',16,399,'images/hat.jpg')">Add
+            to cart</button>
+    </div>
+    <div id="tie">
+        <h1>Tie</h1>
+        <h3>499</h3>
+        <img src="images/tiee.webp">
+        <button onclick="addcart('Tie',17,499,'images/tiee.webp')">Add to cart</button>
+    </div>
+
+</div>
+
+       <script src="losi.js" async defer></script>
+       
+        <script>
+            document.getElementById("nameofuser").innerText =
+            localStorage.getItem("Currentuser");
+        </script>
+
+    </body>
+</html>

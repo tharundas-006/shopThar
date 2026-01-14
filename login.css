@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)),
+        url("images/pexels-olly-3769747.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#1b1c1c;
+}
+
+.login {
+    width: 340px;
+    padding: 30px;
+        background-color: #9895955e;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    color: rgb(0, 0, 0);
+
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.log {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    background: rgba(254, 254, 254, 0.25);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    color: #474545;
+    font-size: 14px;
+}
+
+.log::placeholder {
+    color: rgba(57, 54, 54, 0.8);
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+
+    background: rgba(0, 150, 255, 0.85);
+    border: none;
+    border-radius: 10px;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000000;
+}
+
+a {
+    color: #101010;
+    text-decoration: none;
+}
+
+#link:hover {
+    text-decoration: underline;
+}
+.login:hover{
+    background-color:transparent;
+    scale: 1.06;
+    transform: translate3d(14px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(176, 241, 248, 0.158);
+}
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}body {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+@media (max-width: 600px)
+ {
+    .login{
+        width: 150px;
+        height: 200px;
+    }
+        button {
+            width: 60%;
+            padding: 5px;
+            margin-top: 5px;
+            font-size: 8px;
+        }
+        h3 {
+            margin-top: 5px;
+            font-size:8px;
+            color: #000000;
+        }
+.log {
+    width: 100%;
+    padding: 6px;
+    margin:5px;
+    margin-top: 0%;
+    height:20px;
+    font-size: 8px;
+}
+.log::placeholder
+{
+    font-size: 7px;
+}
+a
+{
+    font-size: 8px;
+}
+
+ }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="cart.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<body>
+     <div class="navbar">
+          <a href="homepage.html" id="home"><i class="fa-solid fa-house"></i></a>
+          <span id="nameofuser"></span>
+        <button onclick="clr()">Clear Cart</button>
+        <h1 id="shopt">shop<span id="ta">T</span></h1>
+        <button onclick="openBuyPopup()" id="buyall">Buy all</button>
+     </div>
+        <div id="cont" class="cont"></div>
+  
+<div class="buy-popup" id="buyPopup">
+    <div class="popup-box">
+        <h2>Buy Summary</h2>
+
+        <div id="buyList">
+        </div>
+
+        <h3 id="buyTotal"></h3>
+
+        <div class="popup-actions">
+            <button id="confirmBuy">Confirm</button>
+            <button class="cancel" onclick="closeBuy()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+    <script src="losi.js"></script>
+            <script>
+                document.getElementById("nameofuser").innerText =
+                localStorage.getItem("Currentuser");
+            </script>
+</body>
+
+</html>
