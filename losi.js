@@ -24,7 +24,7 @@ function signup() {
     }
     else{
     localStorage.setItem("user_" + suser.value, spass.value);
-    window.location,href="index.html";
+    window.location.href="index.html";
     }
 
 }
@@ -181,3 +181,4 @@ function searchProducts() {
 }
 
 window.onload = loadcart;
+
