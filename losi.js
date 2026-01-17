@@ -1,4 +1,6 @@
-
+window.addEventListener("load", function () {
+  document.getElementById("wrapper").style.display = "none";
+});
 function signup() {
     var suser = document.getElementById("suser");
     var spass = document.getElementById("spass");
@@ -181,4 +183,5 @@ function searchProducts() {
 }
 
 window.onload = loadcart;
+
 
