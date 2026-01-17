@@ -1,8 +1,16 @@
 window.addEventListener("load", function () {
   const loader = document.querySelector(".wrapper");
-  if (loader) {
+
+  if (!loader) return;
+
+  loader.style.transition = "opacity 0.5s ease";
+  loader.style.opacity = "0";
+
+  setTimeout(() => {
     loader.style.display = "none";
-  }
+    loader.style.pointerEvents = "none";
+    loader.remove(); 
+  }, 500);
 });
 function signup() {
     var suser = document.getElementById("suser");
@@ -186,6 +194,7 @@ function searchProducts() {
 }
 
 window.onload = loadcart;
+
 
 
 
