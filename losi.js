@@ -1,5 +1,8 @@
 window.addEventListener("load", function () {
-  document.getElementById("wrapper").style.display = "none";
+  const loader = document.querySelector(".wrapper");
+  if (loader) {
+    loader.style.display = "none";
+  }
 });
 function signup() {
     var suser = document.getElementById("suser");
@@ -183,5 +186,6 @@ function searchProducts() {
 }
 
 window.onload = loadcart;
+
 
 
